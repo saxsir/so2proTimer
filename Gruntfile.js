@@ -86,7 +86,9 @@ module.exports = function (grunt) {
 　　　　main: {
 　　　　　　files: [
             {expand: true, cwd: '<%= dev %>scripts/', src: ['**'], dest: '<%= prod %>scripts/'},
-            {expand: true, cwd: '<%= dev %>', src: ['*.TTF'], dest: '<%= prod %>'}
+            {expand: true, cwd: '<%= dev %>', src: ['*.TTF'], dest: '<%= prod %>'},
+            {expand: true, cwd: 'bower_components/bootstrap/dist/', src: ['{,*/}*'], dest: '<%= prod %>lib/bootstrap/'},
+            {expand: true, cwd: 'bower_components/jquery/', src: ['jquery.min.js'], dest: '<%= prod %>lib/jquery/'}
           ]
 　　　　}
 　　},
