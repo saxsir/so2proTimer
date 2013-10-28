@@ -54,7 +54,7 @@ module.exports = function (grunt) {
       },
       scripts: {
         files: '<%= dev %>scripts/*.js',
-        tasks: ['jsbeautifier']
+        tasks: ['jsbeautifier', 'copy:js']
       }
     },
     //@notice: jade（コンパイル）
@@ -83,9 +83,13 @@ module.exports = function (grunt) {
     },
     //@notice: copy(ファイルコピー)
     copy: {
+      js: {
+        files: [
+          {expand: true, cwd: '<%= dev %>scripts/', src: ['**'], dest: '<%= prod %>scripts/'}
+        ]
+      },
 　　　　main: {
 　　　　　　files: [
-            {expand: true, cwd: '<%= dev %>scripts/', src: ['**'], dest: '<%= prod %>scripts/'},
             {expand: true, cwd: '<%= dev %>', src: ['*.TTF'], dest: '<%= prod %>'},
             {expand: true, cwd: 'bower_components/bootstrap/dist/', src: ['{,*/}*'], dest: '<%= prod %>lib/bootstrap/'},
             {expand: true, cwd: 'bower_components/jquery/', src: ['jquery.min.js'], dest: '<%= prod %>lib/jquery/'}
