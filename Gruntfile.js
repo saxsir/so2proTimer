@@ -77,7 +77,7 @@ module.exports = function (grunt) {
           compress: false
         },
         files: {
-          '<%= prod %>styles/app.css': '<%= dev %>stylus/main.styl'
+          '<%= prod %>styles/main.css': '<%= dev %>stylus/main.styl'
         }
       }
     },
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 　　　　main: {
 　　　　　　files: [
             {expand: true, cwd: '<%= dev %>scripts/', src: ['**'], dest: '<%= prod %>scripts/'},
-            {expand: true, cwd: '<%= dev %>lib/', src: ['**'], dest: '<%= prod %>lib/'},
+            {expand: true, cwd: '<%= dev %>', src: ['*.TTF'], dest: '<%= prod %>'}
           ]
 　　　　}
 　　},
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
           report: 'min'
         },
         files: {
-          '<%= prod %>styles/app.css': '<%= prod %>styles/app.css'
+          '<%= prod %>styles/main.css': '<%= prod %>styles/main.css'
         }
       }
     },
