@@ -23,29 +23,49 @@ table
 article,aside,footer,header,hgroup,nav,section,figure,figcaption
   display block
 
-/*!
- * clearfix
- */
-.clearfix
-  min-height 1px
-  &:after
-    content '.'
-    display block
-    clear both
-    height 0
-    visibility hidden
 
 // define variables
-$pageWidth = 980px
-$defaultFontColor = rgb(89,87,87)
 $defaultFontSize = 16px
-$fontFamily = 'Helvetica Neue',Helvetica,Arial,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif
+$fontFamily = disdigi,'Helvetica Neue',Helvetica,Arial,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif
+$silverRatio = 1.4142135623730951
+
+$backgroudColor = rgb(0,0,0)
+
+// Function
+// args: x=基数, y=指数
+pow(x,y)
+  for n in y
+    x *= y
+
+
+/*!
+ * Font
+ */
+@font-face
+  font-family dsdigi
+  font-style normal
+  src url('../DS-DIGI.TTF')
 
 /*!
  * Layouts
  */
 body
-  width $pageWidth
-  color $defaultFontColor
+  width 100%
+  padding 50px
+  background-color rgb(0,0,0)
+  color rgb(255,255,255)
   font $defaultFontSize $fontFamily
-  -webkit-text-size-adjust 100%
+
+  header h1
+    font-size $defaultFontSize * pow($silverRatio, 1)
+  #clock
+    font-size $defaultFontSize * pow($silverRatio, 3)
+    text-align center
+  #info li
+    list-style none
+    line-height 1.6em
+    &:before
+      content '※ '
+
+
+
