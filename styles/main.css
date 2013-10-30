@@ -1,0 +1,51 @@
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
+  margin:0;
+  padding:0
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th, figcaption {
+  font-size:1em;
+  font-weight:400;
+  font-style:normal
+}
+fieldset, iframe {
+  border:none
+}
+caption, th {
+  text-align:left
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0
+}
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+  display:block
+}
+@font-face {
+  font-family:dsdigi;
+  font-style:normal;
+  src:url("../DS-DIGI.TTF")
+}
+body {
+  width:100%;
+  padding:50px;
+  background-color:#000;
+  color:#fff;
+  font:16px'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif
+}
+body header h1 {
+  font-size:22.627416997969522px
+}
+body #clock {
+  font-size:45.254833995939045px;
+  text-align:center
+}
+body #clock .time {
+  font-size:67.88225099390857px
+}
+body #info li {
+  list-style:none;
+  line-height:1.6em
+}
+body #info li:before {
+  content:'※ '
+}
