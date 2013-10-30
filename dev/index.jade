@@ -15,28 +15,20 @@ html(lang="ja")
           h1 卒論提出まであと...
         section
           #clock
-            | k 日と e 時間 i 日 o 秒
+            span.time#days ??
+            | 日と
+            span.time#hours ??
+            | 時間
+            span.time#minitues ??
+            | 日
+            span.time#seconds ??
+            | 秒
           .progress.progress-striped.active
-            .progress-bar#elapsed(role='progressbar', style='width:50%')
-              .sr-only 経過時間
-            .progress-bar.progress-bar-danger#remaining(role='progressbar', style='width:50%')
+            .progress-bar#remaining(role='progressbar', style='width:100%')
               .sr-only 残り時間
         section#info
           ul
             li スタート日は2013/04/01 00:00:00 で、提出期限は2014/01/19/ 23:59:59 で計算しています。
             li 念のため、提出期限は各自で必ず確認して下さい。（研究会によっては教授への提出が早いところもあります）
             li 卒業できるように頑張りましょう。
-
-      <!--
-      article#grad
-        header
-          h1 卒業まであと...
-        section
-        #clock
-          | k 日と e 時間 i 日 o 秒
-        .progress.progress-striped.active
-          .progress-bar#elapsed(role='progressbar', style='width:50%')
-            .sr-only 経過時間
-          .progress-bar.progress-bar-danger#remaining(role='progressbar', style='width:50%')
-            .sr-only 残り時間-->
     script(src='./scripts/app.js')

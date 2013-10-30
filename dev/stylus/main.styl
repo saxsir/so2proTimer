@@ -26,7 +26,7 @@ article,aside,footer,header,hgroup,nav,section,figure,figcaption
 
 // define variables
 $defaultFontSize = 16px
-$fontFamily = disdigi,'Helvetica Neue',Helvetica,Arial,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif
+$fontFamily = 'Helvetica Neue',Helvetica,Arial,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif
 $silverRatio = 1.4142135623730951
 
 $backgroudColor = rgb(0,0,0)
@@ -59,8 +59,10 @@ body
   header h1
     font-size $defaultFontSize * pow($silverRatio, 1)
   #clock
-    font-size $defaultFontSize * pow($silverRatio, 3)
+    font-size $defaultFontSize * pow($silverRatio, 2)
     text-align center
+    .time
+      font-size $defaultFontSize * pow($silverRatio, 3)
   #info li
     list-style none
     line-height 1.6em

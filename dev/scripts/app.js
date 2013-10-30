@@ -18,9 +18,11 @@
   var startTime = new Date(2013, 3, 1, 0, 0, 0),
     deadline = new Date(2014, 0, 19, 23, 59, 59),
     allTerm = ((deadline - startTime) / 1000) | 0,
-    clock = d.getElementById('clock'),
-    leftBar = d.getElementById('elapsed'),
-    rightBar = d.getElementById('remaining');
+    days = d.getElementById('days'),
+    hours = d.getElementById('hours'),
+    minitutes = d.getElementById('minitues'),
+    seconds = d.getElementById('seconds'),
+    progressBar = d.getElementById('remaining');
 
   function getRemainingTime(_deadline) {
     var now = new Date(),
@@ -35,16 +37,22 @@
       hour: rtHour < 10 ? '0' + rtHour : rtHour,
       min: rtMin < 10 ? '0' + rtMin : rtMin,
       sec: rtSec < 10 ? '0' + rtSec : rtSec,
+      rate: remainingTime / allTerm
     };
   }
 
   function updateWindow() {
     var rt = getRemainingTime(deadline);
     // 残り時間を更新
-    clock.innerHTML = rt.day + '日と' + rt.hour + '時間' + rt.min + '分' + rt.sec + '秒';
+    days.innerHTML = rt.day;
+    hours.innerHTML = rt.hour;
+    minitues.innerHTML = rt.min;
+    seconds.innerHTML = rt.sec;
     // プログレスバーを更新
-    leftBar.style.width = (((allTerm - rt.rt) / allTerm) * 100) + '%';
-    rightBar.style.width = ((rt.rt / allTerm) * 100) + '%';
+    progressBar.style.width = rt.rate * 100 + '%';
+    if (rt.rate < 0.1) {
+      progressBar.className += ' progress-bar-danger';
+    }
   }
 
   //updateWindow();
