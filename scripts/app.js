@@ -16,7 +16,7 @@
 
   // 2014/1/19 23:59:59まで
   var startTime = new Date(2013, 3, 1, 0, 0, 0),
-    deadline = new Date(2014, 0, 19, 23, 59, 59),
+    deadline = new Date(2014, 0, 20, 23, 59, 59),
     allTerm = ((deadline - startTime) / 1000) | 0,
     days = d.getElementById('days'),
     hours = d.getElementById('hours'),
