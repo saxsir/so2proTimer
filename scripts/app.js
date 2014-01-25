@@ -15,8 +15,8 @@
   //@todo: 複数イベントを綺麗に整理できるように管理オブジェクトと締め切りオブジェクトをつくる
 
   // 2014/1/19 23:59:59まで
-  var startTime = new Date(2013, 3, 1, 0, 0, 0),
-    deadline = new Date(2014, 0, 20, 23, 59, 59),
+  var startTime = new Date(2014, 3, 1, 0, 0, 0),
+    deadline = new Date(2015, 0, 20, 23, 59, 59),
     allTerm = ((deadline - startTime) / 1000) | 0,
     days = d.getElementById('days'),
     hours = d.getElementById('hours'),
