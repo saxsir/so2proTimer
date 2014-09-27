@@ -1,7 +1,7 @@
 /*!
  * so2proTimer script v1.0.0
  *
- * Copyright 2013 saxsir
+ * Copyright 2013-2014 saxsir
  *
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
@@ -9,11 +9,10 @@
  * If you are interested in programming, please come and join hhlab!!
  * http://www.sfc.keio.ac.jp/introducing_labs/20110712.html
  *
- * Date: 2013-10-29
+ * Date: 2014-09-27
  */
 (function(d) {
-  //@todo: 複数イベントを綺麗に整理できるように管理オブジェクトと締め切りオブジェクトをつくる
-
+  //TODO: 締切日とスタート日を自動で設定するようにしたい（放置したい）
   // 2014/1/19 23:59:59まで
   var startTime = new Date(2014, 3, 1, 0, 0, 0),
     deadline = new Date(2015, 0, 20, 23, 59, 59),
