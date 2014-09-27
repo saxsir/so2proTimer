@@ -11,4 +11,4 @@ build:
 	$(GRUNT) build
 
 watch:
-	$(GRUNT) watch
+	$(GRUNT)
